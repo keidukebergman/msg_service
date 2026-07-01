@@ -293,18 +293,18 @@ Supposing the server is active on localhost with port 8000, some example calls c
 
 `curl -s -X PATCH http://localhost:8000/api/messages/96950cd7-ae57-4df1-b93e-d2a16af0b81d/mark_read -H "user-id: bertil@example.se"`
 
-**Retreival of entire inbox**
+**Retrieval of entire inbox**
 
 `curl -s http://localhost:8000/api/messages -H "user-id: bertil@example.se"`
 
 
-**Retreival of unread messages**
+**Retrieval of unread messages**
 
 `curl -s http://localhost:8000/api/messages?only_unread=true -H "user-id: bertil@example.se"`
 
 
 
-**Retreival of messages between indices 0 and 2 (inclusive)**
+**Retrieval of messages between indices 0 and 2 (inclusive)**
 
 
 `curl -s "http://localhost:8000/api/messages?start_index=0&end_index=2" -H "user-id: bertil@example.se"`
