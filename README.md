@@ -578,7 +578,7 @@ Supposing the server is active on localhost with port 8000, some example calls c
 
   
 
-curl -s -X POST http://localhost:8000/api/send -H "Content-Type: application/json" -H "user-id: alice@example.se" -d '{"sender_id": "alice@example.se", "recipient_id": "bertil@example.se", "subject":"This is the subject", "contents": "This is the main message"}'
+`curl -s -X POST http://localhost:8000/api/send -H "Content-Type: application/json" -H "user-id: alice@example.se" -d '{"sender_id": "alice@example.se", "recipient_id": "bertil@example.se", "subject":"This is the subject", "contents": "This is the main message"}'`
 
   
 
@@ -586,7 +586,7 @@ curl -s -X POST http://localhost:8000/api/send -H "Content-Type: application/jso
 
 **Getting a single message by ID**
 
-curl -s http://localhost:8000/api/messages/87ceefe8-6179-40e8-a523-c6edf24b8300 -H "user-id: bertil@example.se"
+`curl -s http://localhost:8000/api/messages/87ceefe8-6179-40e8-a523-c6edf24b8300 -H "user-id: bertil@example.se"`
 
   
 
@@ -594,20 +594,20 @@ curl -s http://localhost:8000/api/messages/87ceefe8-6179-40e8-a523-c6edf24b8300 
 
   
 
-curl -s -X PATCH http://localhost:8000/api/messages/96950cd7-ae57-4df1-b93e-d2a16af0b81d/mark_read -H "user-id: bertil@example.se"
+`curl -s -X PATCH http://localhost:8000/api/messages/96950cd7-ae57-4df1-b93e-d2a16af0b81d/mark_read -H "user-id: bertil@example.se"`
 
   
 
 **Retreival of entire inbox**
 
-curl -s http://localhost:8000/api/messages -H "user-id: bertil@example.se"
+`curl -s http://localhost:8000/api/messages -H "user-id: bertil@example.se"`
 
   
   
 
 **Retreival of unread messages**
 
-curl -s http://localhost:8000/api/messages?only_unread=true -H "user-id: bertil@example.se"
+`curl -s http://localhost:8000/api/messages?only_unread=true -H "user-id: bertil@example.se"`
 
   
 
@@ -617,7 +617,7 @@ curl -s http://localhost:8000/api/messages?only_unread=true -H "user-id: bertil@
 
   
 
-curl -s "http://localhost:8000/api/messages?start_index=0&end_index=2" -H "user-id: bertil@example.se"
+`curl -s "http://localhost:8000/api/messages?start_index=0&end_index=2" -H "user-id: bertil@example.se"`
 
   
   
@@ -627,7 +627,7 @@ curl -s "http://localhost:8000/api/messages?start_index=0&end_index=2" -H "user-
 
   
 
-curl -s -X DELETE http://localhost:8000/api/messages/96950cd7-ae57-4df1-b93e-d2a16af0b81d -H "user-id: bertil@example.se"
+`curl -s -X DELETE http://localhost:8000/api/messages/96950cd7-ae57-4df1-b93e-d2a16af0b81d -H "user-id: bertil@example.se"`
 
   
 
@@ -635,7 +635,7 @@ curl -s -X DELETE http://localhost:8000/api/messages/96950cd7-ae57-4df1-b93e-d2a
 
 **Deletion of multiple messages**
 
-curl -s -X DELETE "http://localhost:8000/api/messages" -H "user-id: bertil@example.se" -H "Content-Type: application/json" -d '{"ids": ["eabf8666-339b-4c81-8c77-800d7859a530", "f6e3ebfa-dd83-4d11-9c8e-e49ad410a7ae"]}'
+`curl -s -X DELETE "http://localhost:8000/api/messages" -H "user-id: bertil@example.se" -H "Content-Type: application/json" -d '{"ids": ["eabf8666-339b-4c81-8c77-800d7859a530", "f6e3ebfa-dd83-4d11-9c8e-e49ad410a7ae"]}'`
 
   
 
