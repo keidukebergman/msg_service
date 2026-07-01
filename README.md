@@ -15,7 +15,7 @@ The database has a dictionary that stores received messages per-user. When calli
 
 The application uses uv, uvicorn, pydantic and fastapi, which all have to be available in order for the system to run. It was developed with python version 3.12 but should be compatible with subsequent versions.
 
-With the dependencies available, the system is simply run by navigating to the osttra_msg_service directory and running
+With the dependencies available, the system is simply run by navigating to the directory and running
 
 `uv run uvicorn main:app`
 
