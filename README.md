@@ -10,8 +10,7 @@
   
 
   
-
-This service is built in python, using fastapi, pydantic, uvicorn and a set of standard libraries. The main three files are main.py, handling http requests, in_memory_storage.py, acting as an in-memory database, and models.py, which provides the data structure for messages.
+This messaging app sets up a primitive inbox system, from which users (identified by email) can send each other messages, read their own (and only their own) messages and delete any unwanted mail. The service is built in python, using fastapi, pydantic, uvicorn and a set of standard libraries. The main three files are main.py, handling http requests, in_memory_storage.py, acting as an in-memory database, and models.py, which provides the data structure for messages and for the creation and deletion of them.
 
   
 
