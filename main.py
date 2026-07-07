@@ -8,7 +8,7 @@ from app.models import Message, MessageCreate, MessageDeleteRequest
 import re
 
 
-app = FastAPI(title="ostra-messaging-service")
+app = FastAPI(title="osttra-messaging-service")
 EMAIL_PATTERN = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$")
 
 def get_user_id(user_id: str = Header(...)) -> str:
